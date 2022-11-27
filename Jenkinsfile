@@ -11,7 +11,7 @@ pipeline {
         }
         stage('building') {
             steps {
-                sh 'kubectl create -f work-depolyment.yaml'
+                sh 'kubectl create -f work-deployment.yaml'
             }
         }
         stage('testing') {
