@@ -1,6 +1,6 @@
 /* groovylint-disable-next-line CompileStatic */
 pipeline {
-    agent any
+    agent {label 'kubemaster1'}
     stages {
         stage('fetching') {
             steps {
