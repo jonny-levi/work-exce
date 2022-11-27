@@ -5,7 +5,7 @@ pipeline {
         stage('fetching') {
             steps {
                 sh '''git clone https://github.com/jonny-levi/work-exce.git
-                    cd work-exec'''
+                    '''
             }
         }
         stage('building') {
