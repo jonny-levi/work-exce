@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('fetching') {
             steps {
-                sh '''rm work-exec
+                sh '''rm work-exce
                 git clone https://github.com/jonny-levi/work-exce.git
                     '''
             }
