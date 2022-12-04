@@ -4,9 +4,6 @@ pipeline {
         stage('fetching') {
             steps {
                 sh '''
-                cd work-exce
-                kubectl delete -f .
-                cd ..
                 rm -rf work-exce
                 git clone https://github.com/jonny-levi/work-exce.git
                     '''
@@ -15,6 +12,7 @@ pipeline {
         stage('building') {
             steps {
                 sh ''' cd webapp-1
+                kubectl delete -f .
                 kubectl create -f .'''
             }
         }
