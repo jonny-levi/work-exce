@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage('fetching') {
             steps {
-                sh '''rm -rf work-exce
+                sh '''
+                cd work-exce
+                kubectl delete -f .
+                cd ..
+                rm -rf work-exce
                 git clone https://github.com/jonny-levi/work-exce.git
                     '''
             }
